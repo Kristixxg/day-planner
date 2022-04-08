@@ -152,12 +152,16 @@
 
 
 
-// //complete
+//complete
 
-// setInterval(function() {
-//     currentTime = moment().format("MM/DD/YYYY [at] HH:mm:ss");
-//     currentTimeEl.text(currentTime);
-// },1000);
+var currentTimeEl = $('#currentDay');
+var currentTime; 
+var hourH = moment(currentTime).format("H");
+
+setInterval(function() {
+    currentTime = moment().format("MM/DD/YYYY [at] HH:mm:ss");
+    currentTimeEl.text(currentTime);
+},1000);
 
 
 
@@ -215,5 +219,4 @@ for (let i = 9; i < 18; i++ ) {
     })
 
     // console.log(textArea.val().trim())
-    
 }
