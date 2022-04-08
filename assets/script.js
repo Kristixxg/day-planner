@@ -156,7 +156,6 @@
 
 var currentTimeEl = $('#currentDay');
 var currentTime; 
-var hourH = moment(currentTime).format("H");
 
 setInterval(function() {
     currentTime = moment().format("MM/DD/YYYY [at] HH:mm:ss");
@@ -174,8 +173,8 @@ setInterval(function() {
 
 for (let i = 9; i < 18; i++ ) {
     var row = $( "<div></div>" );
-    var className = 'row' + i + 'am';
-    row.addClass('row h-100 ' + className);
+    // var className = 'row' + i + 'am';
+    row.addClass('row h-100');
    
     var hour = $('<div class="hour col-lg-2"></div>');
 
@@ -214,7 +213,6 @@ for (let i = 9; i < 18; i++ ) {
 
     //save new message
     buttonTag.on("click", function(){
-
         localStorage.setItem(`textInput${i}`, JSON.stringify(textArea.val().trim()));
     })
 
